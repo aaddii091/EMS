@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-
+import VueResource from 'vue-resource'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 

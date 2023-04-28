@@ -2,6 +2,7 @@
   "name": "ems-admin",
   "version": "0.0.0",
   "private": true,
+  "proxy": "http://170.187.254.205:8055/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,10 +11,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@vue/composition-api": "^1.7.1",
     "cors": "^2.8.5",
     "directus": "^10.0.0",
     "vue": "^3.2.47",
     "vue-directus": "^1.0.1",
+    "vue-resource": "^1.5.3",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
