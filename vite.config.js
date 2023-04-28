@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import VueResource from 'vue-resource'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
@@ -14,17 +13,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://170.187.254.205:8055/',
-        changeOrigin: true,
-        secure: false,
-        rewrite: (path) => path.replace(/^\/api/, '')
-      },
-      cors: false,
-      CORS_ENABLED: 'false',
-      CORS_ORIGIN: 'false'
+        target: 'http://170.187.254.205:8055',
+        ws: true,
+        changeOrigin: true
+      }
     }
-  },
-  define: {
-    'process.env': {}
   }
 })
